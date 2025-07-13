@@ -16,6 +16,7 @@ describe('Cypress Session Example', () => {
         cy.url().should('include', 'inventory.html');
       }
     });
+    
   });
 
   it('Test Case 1: Verify Features Items', () => {
