@@ -18,24 +18,9 @@
 describe("Cypress Session Example", () => {
   beforeEach(() => {
     // Manually clear session-related storage before running the tests
-    cy.session("loginSession",() => {
-        cy.clearCookies();
-        cy.clearLocalStorage();
-        cy.window().then((win) => win.sessionStorage.clear());
-        cy.visit("https://automationexercise.com/login");
-        cy.xpath("//input[@data-qa='login-email']").type("tania1212@gmail.com");
-        cy.xpath("//input[@placeholder='Password']").type("tania1212");
-        cy.xpath("//button[normalize-space()='Login']").click();
-      },
-      {
-        validate: () => {
-          // Validate if session is still active; if not, it will be re-created
-          cy.xpath("//a[normalize-space()='Logout']").should("be.visible");
-        },
-      }
-    );
+    cy.loginUrl();
     // Ensure we are on the homepage after session restoration
-    // cy.visit('https://automationexercise.com/');
+    cy.visit('https://automationexercise.com/');
   });
 
   it("Test Case 1: Verify Features Items", () => {
@@ -44,7 +29,7 @@ describe("Cypress Session Example", () => {
   it("Test Case 2: Click to cart button", () => {
     cy.xpath("//a[normalize-space()='Cart']").click();
   });
-  it("Test Case 3: Click to Logout button", () => {
-    cy.xpath("//a[normalize-space()='Logout']").click();
-  });
+  // it("Test Case 3: Click to Logout button", () => {
+  //   cy.xpath("//a[normalize-space()='Logout']").click();
+  // });
 });

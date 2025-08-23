@@ -20,6 +20,6 @@ module.exports = defineConfig({
       screenshotOnRunFailure=true;
       
     },
-    testIsolation: false
+    testIsolation: false,
   },
 });

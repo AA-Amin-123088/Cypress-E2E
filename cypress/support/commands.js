@@ -14,9 +14,9 @@ Cypress.Commands.add("loginUrl", () => {
   cy.session(
     "loginSession",
     () => {
-      cy.clearCookies();
-      cy.clearLocalStorage();
-      cy.window().then((win) => win.sessionStorage.clear());
+      // cy.clearCookies();
+      // cy.clearLocalStorage();
+      // cy.window().then((win) => win.sessionStorage.clear());
       cy.visit("https://automationexercise.com/login");
       cy.xpath("//input[@data-qa='login-email']").type("tania1212@gmail.com");
       cy.xpath("//input[@placeholder='Password']").type("tania1212");
