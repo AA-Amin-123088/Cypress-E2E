@@ -1,4 +1,4 @@
-describe("Cypress Session Example", () => {
+describe("Cypress Session Script", () => {
   beforeEach(() => {
     cy.loginUrl();
     // Ensure we are on the homepage after session restoration

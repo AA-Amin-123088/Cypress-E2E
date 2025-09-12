@@ -1,4 +1,4 @@
-describe("Cypress Session Example", () => {
+describe("Cypress Session Test Script", () => {
   beforeEach(() => {
     cy.session("loginSession",() => {
         cy.clearCookies();

@@ -15,7 +15,7 @@
 
 //   });
 
-describe("Cypress Session Example", () => {
+describe("Cypress Session Test", () => {
   beforeEach(() => {
     // Manually clear session-related storage before running the tests
     cy.loginUrl();
