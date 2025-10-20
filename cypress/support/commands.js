@@ -21,6 +21,7 @@ Cypress.Commands.add("loginUrl", () => {
       cy.xpath("//input[@data-qa='login-email']").type("tania1212@gmail.com");
       cy.xpath("//input[@placeholder='Password']").type("tania1212");
       cy.xpath("//button[normalize-space()='Login']").click();
+
     },
     {
       validate: () => {
