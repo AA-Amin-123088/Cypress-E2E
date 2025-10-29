@@ -25,5 +25,3 @@ describe("File upload test automation", () => {
     cy.wait(2000);
   });
 });
-
-// update

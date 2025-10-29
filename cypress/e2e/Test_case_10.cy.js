@@ -28,4 +28,3 @@ describe("Cypress Session Test Script", () => {
     cy.get('[data-test="add-to-cart"]').click();
   });
 });
-//update

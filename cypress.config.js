@@ -15,6 +15,7 @@ module.exports = defineConfig({
     chromeWebSecurity:false,
     retries:1,
     numTestsKeptInMemory: 5,
+    experimentalSessionAndOrigin: true,
     setupNodeEvents(on, config) {
       // implement node event listeners here
       screenshotOnRunFailure=true;
